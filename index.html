@@ -1,7 +1,39 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <title>成績查詢系統</title>
+    <meta name='viewport' content="width=device-width,initial-scale=1">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css' />    
+    <?!= include('style.css'); ?>
+    <base target="_top">    
+  </head>
+  <body>
+    <div class='container mt-3'>
+      <div class="row">
+        <div class="col-10 mx-auto">
+          <h1 class="text-primary text-center">成績查詢系統</h1>
+          <h2 class="text-primary text-center">請登入查詢</h2>
+          <form action="<?= serviceUrl ?>" class="login-form mt-2" method="post">
 
-<div>
-hello world
-    
-</div>
+            <div class ="form-group">
+              <label for="classNum">班級</label>
+              <input type="text" class="form-classNum form-control" placeholder="請輸入班級共兩碼" name= "classNum">
+            </div>
+            <div class ="form-group">
+              <label for="seatNum">座號</label>
+              <input type="text" class="form-seatNum form-control" placeholder="請輸入座號共兩碼" name= "seatNum">
+            </div>
+            <div class ="form-group">
+              <label for="password">密碼</label>
+              <input type="text" class="form-password form-control" placeholder="請輸入密碼" name= "password">              
+            </div>
+
+            <button type="submit" class="btn btn-primary">送出查詢</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
